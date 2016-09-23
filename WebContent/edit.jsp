@@ -19,34 +19,37 @@
 			<h2> Add/Update Car </h2>
 		</div>
 		<div>
+		<h4>${error}</h4>
 			<form id="updateForm" action="UpdateCarServlet" method="post">
+			
+					<input type="hidden" name="id" value="${cars.id}" >
 				<div>
 					<label> Company Name</label>
-					<input type='text' name='car_company_name' value='${cars.make}' placeholder='Company Name'/>
+					<input type='text' name='make' value='${cars.make}' placeholder='Company Name'/>
 				</div>
 	 			<div>
 					<label> Model Number  </label>
-					<input type='text' name='car_model_number' value='${cars.model}' placeholder='Model Number'/>
+					<input type='text' name='model' value='${cars.model}' placeholder='Model Number'/>
 				</div>
 				<div>
 					<label> Engine CC </label>
-					<input type="number" name='car_name' value='${cars.engineInCC}' placeholder='Engine cc' />
+					<input type="number" name='engineInCC' value='${cars.engineInCC}' placeholder='Engine cc' />
 				</div>
 				<div>
 					<label> Fuel Capacity (in Litres) </label>
-					<input type='number' name='car_fuel_capacity' value='${cars.fuelCapacity}' placeholder='Fuel Capacity'/>
+					<input type='number' name='fuelCapacity' value='${cars.fuelCapacity}' placeholder='Fuel Capacity'/>
 				</div>
 				<div>
 					<label> Milage  </label>
-					<input type='number'  name='car_milage' value='${cars.milage}' placeholder='Milage'/>
+					<input type='number'  name='milage' value='${cars.milage}' placeholder='Milage'/>
 				</div>
 				<div>
 					<label> Price </label>
-					<input type='text' name='car_price' value="${cars.price}" placeholder='Price'/>
+					<input type='number' name='price' value="${cars.price}" placeholder='Price'/>
 				</div>
 				<div>
 					<label> Road Tax </label>
-					<input type='text' name='car_road_tax' value="${cars.roadTax}" placeholder='Road Tax' />
+					<input type='number' name='roadTax' value="${cars.roadTax}" placeholder='Road Tax' />
 				</div>
 				
 				<div>

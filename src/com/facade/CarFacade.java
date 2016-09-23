@@ -36,7 +36,7 @@ public class CarFacade {
 	public boolean save(CarVO carVO) {
 
 		boolean status = false;
-		if (carVO.getId() == 0) {
+		if (carVO.getId() == -1) {
 			int tmp = cardao.insert(carVO);
 			if (tmp > 0) {
 				status = true;
@@ -45,6 +45,10 @@ public class CarFacade {
 			status = cardao.update(carVO);
 		}
 		return status;
+	}
+	
+	public boolean removeById(int id) {
+		return cardao.deleteById(id);
 	}
 
 }

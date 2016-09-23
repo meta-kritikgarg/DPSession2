@@ -170,6 +170,7 @@ public class CarDAO implements CarDaoInterface {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println("status = " + status);
 
 		return status;
 	}

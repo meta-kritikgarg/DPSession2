@@ -14,7 +14,7 @@
 <title>Cars</title>
 </head>
 <body>
-
+<a href='edit.jsp'> Add Car</a>
 
 
 	<table>
@@ -46,6 +46,8 @@
 			<td> <c:out value="${car.accessoryKit}"/></td>
 			<td> <c:out value="${car.milage}"/></td>
 			<td><a href="ViewcarsController?carId=<c:out value="${car.id}"/>">Edit</a></td>
+			<td><a href="DeleteController?carId=<c:out value="${car.id}"/>">Delete</a></td>
+			
             
         </tr>
     </c:forEach>
